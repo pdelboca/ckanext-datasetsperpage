@@ -22,4 +22,4 @@ class TestDataSetPerPagePlugin(object):
     def test_datasets_per_page_is_editable_runtime(self):
         """Run."""
         configs = call_action('config_option_list')
-        assert_equal('ckan.datasets_per_pagess' in configs, True)
+        assert_equal('ckan.datasets_per_page' in configs, True)
