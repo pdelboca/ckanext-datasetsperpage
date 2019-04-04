@@ -1,0 +1,23 @@
+{% ckan_extends %}
+
+{% import 'macros/form.html' as form %}
+
+{% block admin_form %}
+
+  {{ super() }}
+
+  <h3>Custom configuration options</h3>
+
+  {{ form.input('ckan.datasets_per_page', id='field-ckan.datasets_per_page', label=_('Datasets per page'), value=data['ckan.datasets_per_page'], error=errors['ckan.datasets_per_page']) }}
+
+
+{% endblock %}
+
+
+{% block admin_form_help %}
+
+  {{ super() }}
+
+  <p><strong>Datasets per page:</strong> Number of datasets displayed in dataset listings (eg search page).</p>
+
+{% endblock %}
